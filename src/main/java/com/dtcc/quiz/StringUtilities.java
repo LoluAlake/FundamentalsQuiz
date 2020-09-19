@@ -1,11 +1,15 @@
 package com.dtcc.quiz;
 
+import java.util.Scanner;
+
 public class StringUtilities {
     /**
      * @param input value to be returned
      * @return `input`
      */
+    Scanner input = new Scanner(System.in);
     public String returnInput(String input) {
+
         return null;
     }
 
@@ -15,6 +19,7 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
+
         return null;
     }
 
@@ -23,7 +28,14 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        if(valueToBeReversed == null){
+            return valueToBeReversed;
+        }
+        String input = " ";
+        for(int i = valueToBeReversed.length()-1; i >= 0; i--){
+            input += valueToBeReversed.charAt(i);
+        }
+        return input;
     }
 
     /**

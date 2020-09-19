@@ -1,6 +1,9 @@
 package com.dtcc.quiz;
 
+import java.util.Scanner;
+
 public class MathUtilities {
+    Scanner input = new Scanner(System.in);
     /**
      * Add two number together
      * @param baseValue first number
@@ -8,7 +11,8 @@ public class MathUtilities {
      * @return the sum of the two numbers
      */
     public Integer add(Integer baseValue, Integer valueToAdd){
-        return null;
+        int sum = baseValue + valueToAdd;
+        return sum;
     }
 
     /**
@@ -18,7 +22,8 @@ public class MathUtilities {
      * @return the sum of the two numbers
      */
     public Double add(Double baseValue, Double valueToAdd){
-        return null;
+        double dSum = baseValue + valueToAdd;
+        return dSum;
     }
 
     /**
@@ -27,7 +32,8 @@ public class MathUtilities {
      * @return the half of the number in double
      */
     public Double half(Integer number) {
-        return null;
+      double halfNum = number/2;
+        return halfNum;
     }
 
     /**
@@ -36,8 +42,12 @@ public class MathUtilities {
      * @return true if the number is odd, false if it is even
      */
     public Boolean isOdd(Integer number){
+        boolean odd = false;
+        int i = input.nextInt();
+        if(i % 2 == 0){
+            return true;
+        }else
        return false;
-
     }
 
 
@@ -47,6 +57,8 @@ public class MathUtilities {
      * @return the result of the number multiply by itself
      */
     public Integer square(Integer number) {
-        return null;
+        int num = input.nextInt();
+        number *= number;
+        return number;
     }
 }

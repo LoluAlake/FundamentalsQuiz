@@ -1,5 +1,7 @@
 package com.dtcc.quiz;
 
+import java.util.Scanner;
+
 public class LoopFun {
     /**
      * Given a number, return the factorial of that number.
@@ -7,8 +9,13 @@ public class LoopFun {
      * @param number
      * @return the factorial of the number
      */
-    public Integer factorial(Integer number){
-        return null;
+    Scanner input = new Scanner(System.in);
+
+    public Integer factorial(Integer number) {
+      if(number == 1){
+          return 1;
+      }else
+        return number * factorial(number - 1);
 }
 
     /**
@@ -19,7 +26,16 @@ public class LoopFun {
      * @return Upper case string of the first letter of each word
      */
     public String acronym(String phrase) {
-       return null;
+        String line = " ";
+        System.out.print("Enter a phrase to get the acronym: ");
+        phrase = input.nextLine();
+
+        for (int i = 1; i <= phrase.length() -1; i++){
+           if(phrase.charAt(i-1) == ' '){
+               line += phrase.toUpperCase().charAt(i);
+           }
+        }
+        return line;
     }
 
     /**
@@ -35,7 +51,20 @@ public class LoopFun {
      * @return the encrypted string by shifting each character by three character
      */
     public String encrypt(String word) {
-        return null;
+       // char[] ch = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+            String str = " ";
+           char c;
+           int a = 3;
+           word = input.next();
+        for (int i = 0; i < word.length(); i++){
+            c = (char) ((word.charAt(i))+ a);
+            if(c > 'z'){
+                str += (char)(word.charAt(i) - (26 - a));
+            }else{
+                str += (char)(word.charAt(i) + a);
+            }
+        }
+        return str;
     }
 
 }
